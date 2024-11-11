@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtuális Galéria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Bejelentkezési képernyő -->
+    <div class="login-screen" id="loginScreen">
+        <div class="login-box">
+            <h2>Bejelentkezés</h2>
+            <p>Kérlek, add meg a jelszót a belépéshez:</p>
+            <input type="password" id="passwordInput" placeholder="Jelszó">
+            <button onclick="checkPassword()">Belépés</button>
+            <p id="errorMessage" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Kép Galéria -->
+    <div class="container" id="galleryContainer" style="display: none;">
+        <h1>Virtuális Kép Galéria</h1>
+        <p>Kattints egy képre, hogy megjelenjen:</p>
+        <div class="gallery">
+            <button onclick="showImage('kep1.png')">Kép 1</button>
+            <button onclick="showImage('kep2.png')">Kép 2</button>
+            <button onclick="showImage('kep3.png')">Kép 3</button>
+            <button onclick="showImage('kep4.png')">Kép 4</button>
+            <button onclick="showImage('kep5.png')">Kép 5</button>
+            <button onclick="showImage('kep6.png')">Kép 6</button>
+            <button onclick="showImage('kep7.png')">Kép 7</button>
+            <button onclick="showImage('kep8.png')">Kép 8</button>
+        </div>
+        <button class="hide-btn" onclick="hideImage()">Kép eltüntetése</button>
+        <div class="display">
+            <img id="displayImage" src="images/kep1.png" alt="Kép megjelenítése" class="hidden">
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
